@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캡스톤 1조</title>
+    {% include 'head.html' %}
+    {% include 'topmenu.html' %}
+    <style>
+        .logo {
+            width: 60%;
+            float: left;
+        }
+        .prediction {
+            width: 40%;
+            float: left;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        .prediction .prediction-text {
+            font-weight: bold;
+            color: red;
+        }
+        .prediction .prediction-text span {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <br/><br/><br/><br/>
+    <img src="/camera" class="logo" />
+    <br/><br/><br/><br/><br/><br/><br/><br/>
+    <div class="prediction">
+        <h2>졸음 운전 예측 결과</h2>
+        <p><span class="prediction-text">졸음 상태</span>인 걸로 예측됩니다.</p>
+    </div>
+    <div class="top_btn fix_btn"><i class="fas fa-arrow-up"></i></div>
+    <div class="chatbot_btn fix_btn"><i class="fas fa-robot"></i></div>
+    <!-- 챗봇 버튼 -->
+    <div class="chatbot_btn fix_btn" onclick="openChatbot()">
+        <i class="fas fa-robot"></i>
+    </div>
+    <script>
+        function openChatbot() {
+            // 챗봇 화면으로 이동
+            window.location.href = "/chatbot";
+        }
+    </script>
+    <!-- ChatBot -->
+    <div class="window_wrap" id="chatbot_wrap">
+		<div class="window_title">
+			<div>
+				<i class="fas fa-robot"></i>
+				<span>CHATBOT</span>
+			</div>
+			<div class="window_close_btn" id="chatbot_window_close" onclick="close_chatbot()"><i class="fas fa-times"></i></div>
+		</div>
+		<div class="chatbot_box">
+			<div class="msg_box">
+				<div class="chat_msg_box">
+					<div class="chat_msg_box_left">
+						<i class="fas fa-robot"></i>
+					</div>
+					<div class="chat_msg_box_right">
+						<span class="chat_msg_date"></span>
+						<span class="chat_msg_info">Hello, I'm Cholong. 무엇이든 물어보세요. </span>
+					</div>
+				</div>
+			</div>
+			<div class="msg_input">
+				<input id="send_chat_input" type="text" onkeypress="enter_keypress(event)"></input>
+				<button id="send_chat_btn" type="button"><i class="fas fa-paper-plane"></i></button>
+			</div>
+		</div>
+	</div>
+</html>
+</body>
+</html>

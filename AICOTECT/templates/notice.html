@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    {% include 'head.html' %}
+    {% include 'topmenu.html' %}
+</head>
+
+<body>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+</body>
+</html>
+
+            <!--product section-->
+            <section id="product" class="product">
+                <div class="container">
+                    <div class="main_product roomy-80">
+                        <div class="head_title text-center fix">
+                            <h2 class="text-uppercase">NOTICE</h2>
+                            <h5>Notification or warning of something, especially to allow preparations to be made.</h5>
+                        </div>
+                    </div><!-- End off row -->
+                </div><!-- End off container -->
+            </section><!-- End off Product section -->
+
+
+
+            <!--Test section-->
+            <section id="test" class="test bg-grey roomy-60 fix">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_test fix">
+                            <!-- table -->
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <table class="table">
+                                     <colgroup>
+                                        <col style="width: 5%">
+                                        <col style="width: *%">
+                                        <col style="width: 15%">
+                                        <col style="width: 20%">
+                                     </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>제목</th>
+                                            <th>작성자</th>
+                                            <th>작성일</th>
+                                        </tr>
+                                    </thead>
+                                    </tbody>
+                                            {% for notice in noticeList %}
+                                            <tr onclick="window.locatation='noticeDetail.do?num=$={notice.no}';"></tr>
+                                            <td>${{notice.no}}</td>
+                                            <td style="text-align: left">${{notice.title}}</td>
+                                            <td>${{notice.user_id}}</td>
+                                            <td>${{notice.dates}}</td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /table -->
+                        </div>
+                    </div>
+                </div>
+            </section><!-- End off test section -->
+
+            <footer id="contact" class="footer action-lage bg-black p-top-80">
+                <!--<div class="action-lage"></div>-->
+                <div class="container">
+                    <div class="row">
+                        <div class="widget_area">
+                            <div class="col-md-3">
+                                <div class="widget_item widget_about">
+                                    <h5 class="text-white">About Us</h5>
+                                    <p class="m-top-20">저희는 광주여대 AI융합학과 소속으로 각기 다른 재능과 열정을 모아 무궁무진한 가능성을 만들어냅니다.</p>
+                                    <div class="widget_ab_item m-top-30">
+                                        <div class="item_icon"><i class="fa fa-location-arrow"></i></div>
+                                        <div class="widget_ab_item_text">
+                                            <h6 class="text-white">Location</h6>
+                                            <p>광주광역시 광산구 광주여대길 40 [62396]</p>
+                                        </div>
+                                    </div>
+                                    <div class="widget_ab_item m-top-30">
+                                        <div class="item_icon"><i class="fa fa-phone"></i></div>
+                                        <div class="widget_ab_item_text">
+                                            <h6 class="text-white">Phone :</h6>
+                                            <p>+1 2345 6789</p>
+                                        </div>
+                                    </div>
+                                    <div class="widget_ab_item m-top-30">
+                                        <div class="item_icon"><i class="fa fa-envelope-o"></i></div>
+                                        <div class="widget_ab_item_text">
+                                            <h6 class="text-white">Email Address :</h6>
+                                            <p>youremail@mail.com</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End off widget item -->
+                            </div><!-- End off col-md-3 -->
+
+                            <div class="col-md-3">
+                                <div class="widget_item widget_latest sm-m-top-50">
+                                    <h5 class="text-white">Latest News</h5>
+                                    <div class="widget_latst_item m-top-30">
+                                        <div class="item_icon"><img src="assets/images/ltst-img-1.jpg" alt="" /></div>
+                                        <div class="widget_latst_item_text">
+                                            <p>첫 번째 소식입니다.</p>
+                                            <a href="">06<sup>th</sup> June 2024</a>
+                                        </div>
+                                    </div>
+                                    <div class="widget_latst_item m-top-30">
+                                        <div class="item_icon"><img src="assets/images/ltst-img-1.jpg" alt="" /></div>
+                                        <div class="widget_latst_item_text">
+                                            <p>두 번째 소식입니다.</p>
+                                            <a href="">06<sup>th</sup> June 2024</a>
+                                        </div>
+                                    </div>
+                                    <div class="widget_latst_item m-top-30">
+                                        <div class="item_icon"><img src="assets/images/ltst-img-1.jpg" alt="" /></div>
+                                        <div class="widget_latst_item_text">
+                                            <p>세 번째 소식입니다.</p>
+                                            <a href="">06<sup>th</sup> June 2024</a>
+                                        </div>
+                                    </div>
+                                    <div class="widget_latst_item m-top-30">
+                                        <div class="item_icon"><img src="assets/images/ltst-img-1.jpg" alt="" /></div>
+                                        <div class="widget_latst_item_text">
+                                            <p>네 번째 소식입니다.</p>
+                                            <a href="">06<sup>th</sup> June 2024</a>
+                                        </div>
+                                    </div>
+
+                                </div><!-- End off widget item -->
+                            </div><!-- End off col-md-3 -->
+
+                            <div class="col-md-3">
+                                <div class="widget_item widget_service sm-m-top-50">
+                                    <h5 class="text-white">Related Sites</h5>
+                                    <ul class="m-top-20">
+                                        <li class="m-top-20"><a href="https://www.koroad.or.kr/"><i class="fa fa-angle-right"></i> 도로교통공단(한국)</a></li>
+                                        <li class="m-top-20"><a href="https://www.police.go.kr/"><i class="fa fa-angle-right"></i> 경찰청(한국)</a></li>
+                                        <li class="m-top-20"><a href="https://www.nhtsa.gov/"><i class="fa fa-angle-right"></i> 미국 고속도로 교통 안전국(NHTSA)</a></li>
+                                        <li class="m-top-20"><a href=""><i class="fa fa-angle-right"></i> 미국 교통사고 및 음주운전 정보 포털</a></li>
+                                        <li class="m-top-20"><a href=""><i class="fa fa-angle-right"></i> 영국 도로교통사고 조사회</a></li>
+                                    </ul>
+                                </div><!-- End off widget item -->
+                            </div><!-- End off col-md-3 -->
+
+                            <div class="col-md-3">
+                                <div class="widget_item widget_newsletter sm-m-top-50">
+                                    <h5 class="text-white">Newsletter</h5>
+                                    <form class="form-inline m-top-30">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Enter you Email">
+                                            <button type="submit" class="btn text-center"><i class="fa fa-arrow-right"></i></button>
+                                        </div>
+
+                                    </form>
+                                    <div class="widget_brand m-top-40">
+                                        <a href="" class="text-uppercase">ZTECT</a>
+                                        <p>졸음 운전 등 운전 중 이상행동을 감지하고 운전자에게 알려 더 나은 도로 환경을 조성합니다.</p>
+                                    </div>
+
+                                </div><!-- End off widget item -->
+                            </div><!-- End off col-md-3 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="main_footer fix bg-mega text-center p-top-40 p-bottom-30 m-top-80">
+
+                </div>
+            </footer>
+
+
+
+
+        </div>
+
+        <!-- JS includes -->
+
+        <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.js"></script>
+        <script src="assets/js/jquery.easing.1.3.js"></script>
+        <script src="assets/css/slick/slick.js"></script>
+        <script src="assets/css/slick/slick.min.js"></script>
+        <script src="assets/js/jquery.collapse.js"></script>
+        <script src="assets/js/bootsnav.js"></script>
+
+
+
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
