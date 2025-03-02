@@ -1,0 +1,110 @@
+/* Window for Chatbot and kakao */
+.window_wrap {
+	min-width: 39rem;
+	max-width: 39rem;
+	display: none;
+	position: fixed;
+	z-index: 990;
+	border-radius: 0.5rem;
+	right: 15rem;
+	bottom: 3rem;
+	box-shadow: 0 0.4rem 1rem 0 rgba(0,0,0,0.2), 0 0.4rem 2rem 0 rgba(0,0,0,0.19);
+	overflow: hidden;
+}
+.window_title {
+	background-color: #2F3138;
+	color: white;
+	font-weight: bold;
+	padding: 0.7rem 0 0.7rem 1.5rem;
+	font-size: 1.8rem;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 3.5rem;
+}
+.window_title span{
+	line-height: 3.5rem;
+}
+.window_title > div {
+	display: flex;
+	align-items: center;
+	gap: 3px;
+}
+.window_close_btn {
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+}
+
+/* Kakao */
+.kakao_box {
+	background-color: white;
+}
+#kakao_msg_box {
+	height: auto;
+}
+.kakao_msg_info {
+	font-size: 1.5rem;
+}
+.kakao_input_area {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+.kakao_input_box {
+	border: 1px solid #2d2f31;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.kakao_input {
+	width: 100%;
+	border: 0!important;
+	box-shadow: none!important;
+	outline: 0!important;
+	height: 6rem!important;
+	padding: 2rem 1.6rem 0;
+	transition: opacity 100ms linear;
+	font-size: 1.6rem;
+	opacity: 0;
+
+}
+.kakao_input_label {
+	width: 95%;
+	z-index: 100;
+	font-weight: bold;
+	font-size: 1.6rem;
+	left: .8rem;
+	position: absolute;
+	top: .8rem;
+	border: 1px solid transparent;
+	transform: translateY(1.2rem);
+	transform-origin: top left;
+	transition: all 150ms cubic-bezier(.2,0,.38,.9);
+}
+
+#send_kakao_btn{
+	font-family: 'Nanum Gothic', sans-serif;
+	width: 100%;
+	text-align: center;
+	height: 4.5rem;
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	padding-top: 1.2rem;
+	padding-bottom: 1.2rem;
+	font-weight: bold;
+	display: flex;
+	border-radius: 0.4rem;
+	justify-content: center;
+	align-items: center;
+	color: #191919;
+	border: 0;
+	outline: none;
+	background: #FEE500;
+	cursor: pointer;
+	transition: all 0.1s ease;
+	text-align: center;
+}

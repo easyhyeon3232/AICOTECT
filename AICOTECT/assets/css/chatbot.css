@@ -1,0 +1,35 @@
+/* Side Button */
+.fix_btn {
+z-index: 999;
+position: fixed;
+right: 5rem;
+color: white;
+width: 6rem;
+height: 6rem;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 2.7rem;
+cursor: pointer;
+box-shadow: 0 0.4rem 1rem 0 rgba(0,0,0,0.2), 0 0.4rem 2rem 0 rgba(0,0,0,0.19);
+}
+.fix_btn > i {
+transition: transform .3s;
+}
+.fix_btn:hover > i{
+animation: heartBeat 1.5s infinite;
+}
+.chatbot_btn, .chatbot_close_btn {
+bottom: 10rem;
+background-color: #10A37F;
+}
+.kakao_btn, .kakao_close_btn {
+bottom: 3rem;
+background-color: #1E90FF;
+}
+.top_btn {
+bottom: 17rem;
+background-color: #2F3138;
+display: none;
+}
